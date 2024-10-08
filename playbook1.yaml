@@ -4,4 +4,4 @@
   tasks:
     - name: Print message
       debug:
-        msg: Hello Ansible World
+        msg: Hello {{ test }} World
