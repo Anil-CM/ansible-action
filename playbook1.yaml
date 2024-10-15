@@ -1,7 +1,12 @@
 
 ---
-- hosts: all
+- hosts: localhost
   tasks:
+
+    - name: Save existing SSH Key as fact
+      set_fact:
+        cacheable: True
+        secure_ip_display: "{{ test }}"
     - name: Print message
       debug:
-        msg: Hello {{ test }} World
+        msg: This is the resolved value {{ secure_ip_display }} now
